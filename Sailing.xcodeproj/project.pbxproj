@@ -18,8 +18,8 @@
 		ADA4CB1118258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB0F18258672005458ED /* InfoPlist.strings */; };
 		ADA4CB1318258672005458ED /* SailingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1218258672005458ED /* SailingTests.m */; };
 		ADA4CB1E18258696005458ED /* Boat.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1D18258696005458ED /* Boat.m */; };
-		ADA4CB2118258889005458ED /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB2018258889005458ED /* Wind.m */; };
 		ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */; };
+		ADAE9CCC1828EAE800A4C936 /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9CCB1828EAE800A4C936 /* Wind.m */; };
 		ADC0272618269C5A001E324F /* WindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0272518269C5A001E324F /* WindViewController.m */; };
 		ADC027291826BBE0001E324F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC027281826BBE0001E324F /* MainViewController.m */; };
 		ADC027351826E3AB001E324F /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADC027341826E3AB001E324F /* MapBox.bundle */; };
@@ -72,12 +72,12 @@
 		ADA4CB1218258672005458ED /* SailingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SailingTests.m; sourceTree = "<group>"; };
 		ADA4CB1C18258696005458ED /* Boat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boat.h; sourceTree = "<group>"; };
 		ADA4CB1D18258696005458ED /* Boat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boat.m; sourceTree = "<group>"; };
-		ADA4CB1F18258889005458ED /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wind.h; path = ../Wind.h; sourceTree = "<group>"; };
-		ADA4CB2018258889005458ED /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wind.m; path = ../Wind.m; sourceTree = "<group>"; };
 		ADA4CB231826574F005458ED /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
 		ADA4CB2418265FF8005458ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADA4CB2618265FFE005458ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "297px-Yellow_Arrow_Up.png"; sourceTree = "<group>"; };
+		ADAE9CCA1828EAE800A4C936 /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wind.h; sourceTree = "<group>"; };
+		ADAE9CCB1828EAE800A4C936 /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wind.m; sourceTree = "<group>"; };
 		ADC0272418269C5A001E324F /* WindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindViewController.h; sourceTree = "<group>"; };
 		ADC0272518269C5A001E324F /* WindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindViewController.m; sourceTree = "<group>"; };
 		ADC027271826BBE0001E324F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -223,10 +223,10 @@
 		ADA4CB2218258896005458ED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ADAE9CCA1828EAE800A4C936 /* Wind.h */,
+				ADAE9CCB1828EAE800A4C936 /* Wind.m */,
 				ADA4CB1C18258696005458ED /* Boat.h */,
 				ADA4CB1D18258696005458ED /* Boat.m */,
-				ADA4CB1F18258889005458ED /* Wind.h */,
-				ADA4CB2018258889005458ED /* Wind.m */,
 				ADA4CB231826574F005458ED /* Enums.h */,
 				ADF04E211827EF64009369BB /* Helper.h */,
 				ADF04E221827EF64009369BB /* Helper.m */,
@@ -359,8 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA4CB2118258889005458ED /* Wind.m in Sources */,
 				ADC027291826BBE0001E324F /* MainViewController.m in Sources */,
+				ADAE9CCC1828EAE800A4C936 /* Wind.m in Sources */,
 				ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */,
 				ADA4CAF818258672005458ED /* AppDelegate.m in Sources */,
 				ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */,
