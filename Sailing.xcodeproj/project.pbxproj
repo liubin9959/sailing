@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CAF018258672005458ED /* InfoPlist.strings */; };
+		ADA4CAF418258672005458ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF318258672005458ED /* main.m */; };
+		ADA4CAF818258672005458ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF718258672005458ED /* AppDelegate.m */; };
+		ADA4CAFB18258672005458ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CAF918258672005458ED /* Main.storyboard */; };
+		ADA4CB0018258672005458ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CAFF18258672005458ED /* Images.xcassets */; };
+		ADA4CB0718258672005458ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CB0618258672005458ED /* XCTest.framework */; };
+		ADA4CB0818258672005458ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAE718258672005458ED /* Foundation.framework */; };
+		ADA4CB0918258672005458ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAEB18258672005458ED /* UIKit.framework */; };
+		ADA4CB1118258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB0F18258672005458ED /* InfoPlist.strings */; };
+		ADA4CB1318258672005458ED /* SailingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1218258672005458ED /* SailingTests.m */; };
+		ADA4CB1E18258696005458ED /* Boat.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1D18258696005458ED /* Boat.m */; };
+		ADA4CB2118258889005458ED /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB2018258889005458ED /* Wind.m */; };
+		ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */; };
+		ADC0272618269C5A001E324F /* WindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0272518269C5A001E324F /* WindViewController.m */; };
+		ADC027291826BBE0001E324F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC027281826BBE0001E324F /* MainViewController.m */; };
+		ADC027351826E3AB001E324F /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADC027341826E3AB001E324F /* MapBox.bundle */; };
+		ADCC6A5F1828E35E0079F528 /* Routing.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCC6A5E1828E35E0079F528 /* Routing.m */; };
+		ADF04E231827EF64009369BB /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E221827EF64009369BB /* Helper.m */; };
+		ADF04E51182803A5009369BB /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E4A182803A5009369BB /* base64.m */; };
+		ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E4D182803A5009369BB /* NSData+SRB64Additions.m */; };
+		ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E50182803A5009369BB /* SRWebSocket.m */; };
+		ADF04E541828072A009369BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAE718258672005458ED /* Foundation.framework */; };
+		ADF04E5518280733009369BB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF04E341827FBC3009369BB /* Security.framework */; };
+		ADF04E561828073A009369BB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF04E301827FBB0009369BB /* libicucore.dylib */; };
+		ADF04E5718280740009369BB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC0272E1826C304001E324F /* libz.dylib */; };
+		ADF04E581828075E009369BB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC0272C1826C2FD001E324F /* libsqlite3.dylib */; };
+		ADF04E5918280764009369BB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CB2618265FFE005458ED /* CoreLocation.framework */; };
+		ADF04E5A18280769009369BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CB2418265FF8005458ED /* QuartzCore.framework */; };
+		ADF04E5B1828076F009369BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAE918258672005458ED /* CoreGraphics.framework */; };
+		ADF04E5C1828077A009369BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAEB18258672005458ED /* UIKit.framework */; };
+		ADF04E5D18280787009369BB /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC0272A1826C2BB001E324F /* MapBox.framework */; };
+		ADF04E5E1828079A009369BB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF04E321827FBBA009369BB /* CFNetwork.framework */; };
+		ADF04E6018285B06009369BB /* schenectady.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADF04E5F18285B06009369BB /* schenectady.mbtiles */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADA4CB0A18258672005458ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA4CADC18258672005458ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA4CAE318258672005458ED;
+			remoteInfo = Sailing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADA4CAE418258672005458ED /* Sailing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sailing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA4CAE718258672005458ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ADA4CAE918258672005458ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ADA4CAEB18258672005458ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ADA4CAEF18258672005458ED /* Sailing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sailing-Info.plist"; sourceTree = "<group>"; };
+		ADA4CAF118258672005458ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADA4CAF318258672005458ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADA4CAF518258672005458ED /* Sailing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sailing-Prefix.pch"; sourceTree = "<group>"; };
+		ADA4CAF618258672005458ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ADA4CAF718258672005458ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADA4CAFA18258672005458ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADA4CAFF18258672005458ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ADA4CB0518258672005458ED /* SailingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SailingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA4CB0618258672005458ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ADA4CB0E18258672005458ED /* SailingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SailingTests-Info.plist"; sourceTree = "<group>"; };
+		ADA4CB1018258672005458ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ADA4CB1218258672005458ED /* SailingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SailingTests.m; sourceTree = "<group>"; };
+		ADA4CB1C18258696005458ED /* Boat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boat.h; sourceTree = "<group>"; };
+		ADA4CB1D18258696005458ED /* Boat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boat.m; sourceTree = "<group>"; };
+		ADA4CB1F18258889005458ED /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wind.h; path = ../Wind.h; sourceTree = "<group>"; };
+		ADA4CB2018258889005458ED /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wind.m; path = ../Wind.m; sourceTree = "<group>"; };
+		ADA4CB231826574F005458ED /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		ADA4CB2418265FF8005458ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ADA4CB2618265FFE005458ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "297px-Yellow_Arrow_Up.png"; sourceTree = "<group>"; };
+		ADC0272418269C5A001E324F /* WindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindViewController.h; sourceTree = "<group>"; };
+		ADC0272518269C5A001E324F /* WindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindViewController.m; sourceTree = "<group>"; };
+		ADC027271826BBE0001E324F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		ADC027281826BBE0001E324F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		ADC0272A1826C2BB001E324F /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
+		ADC0272C1826C2FD001E324F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		ADC0272E1826C304001E324F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		ADC027341826E3AB001E324F /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MapBox.bundle; path = MapBox.framework/Versions/A/Resources/MapBox.bundle; sourceTree = SOURCE_ROOT; };
+		ADCC6A5D1828E35E0079F528 /* Routing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routing.h; sourceTree = "<group>"; };
+		ADCC6A5E1828E35E0079F528 /* Routing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Routing.m; sourceTree = "<group>"; };
+		ADF04E211827EF64009369BB /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		ADF04E221827EF64009369BB /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		ADF04E301827FBB0009369BB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		ADF04E321827FBBA009369BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		ADF04E341827FBC3009369BB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ADF04E4A182803A5009369BB /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
+		ADF04E4B182803A5009369BB /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		ADF04E4C182803A5009369BB /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		ADF04E4D182803A5009369BB /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		ADF04E4F182803A5009369BB /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		ADF04E50182803A5009369BB /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		ADF04E5F18285B06009369BB /* schenectady.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = schenectady.mbtiles; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADA4CAE118258672005458ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADF04E5E1828079A009369BB /* CFNetwork.framework in Frameworks */,
+				ADF04E5C1828077A009369BB /* UIKit.framework in Frameworks */,
+				ADF04E5B1828076F009369BB /* CoreGraphics.framework in Frameworks */,
+				ADF04E5A18280769009369BB /* QuartzCore.framework in Frameworks */,
+				ADF04E5918280764009369BB /* CoreLocation.framework in Frameworks */,
+				ADF04E581828075E009369BB /* libsqlite3.dylib in Frameworks */,
+				ADF04E5718280740009369BB /* libz.dylib in Frameworks */,
+				ADF04E561828073A009369BB /* libicucore.dylib in Frameworks */,
+				ADF04E5518280733009369BB /* Security.framework in Frameworks */,
+				ADF04E5D18280787009369BB /* MapBox.framework in Frameworks */,
+				ADF04E541828072A009369BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA4CB0218258672005458ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA4CB0718258672005458ED /* XCTest.framework in Frameworks */,
+				ADA4CB0918258672005458ED /* UIKit.framework in Frameworks */,
+				ADA4CB0818258672005458ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADA4CADB18258672005458ED = {
+			isa = PBXGroup;
+			children = (
+				ADA4CAED18258672005458ED /* Sailing */,
+				ADA4CB0C18258672005458ED /* SailingTests */,
+				ADA4CAE618258672005458ED /* Frameworks */,
+				ADA4CAE518258672005458ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADA4CAE518258672005458ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4CAE418258672005458ED /* Sailing.app */,
+				ADA4CB0518258672005458ED /* SailingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADA4CAE618258672005458ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADF04E341827FBC3009369BB /* Security.framework */,
+				ADF04E321827FBBA009369BB /* CFNetwork.framework */,
+				ADF04E301827FBB0009369BB /* libicucore.dylib */,
+				ADC0272E1826C304001E324F /* libz.dylib */,
+				ADC0272C1826C2FD001E324F /* libsqlite3.dylib */,
+				ADC0272A1826C2BB001E324F /* MapBox.framework */,
+				ADA4CB2618265FFE005458ED /* CoreLocation.framework */,
+				ADA4CB2418265FF8005458ED /* QuartzCore.framework */,
+				ADA4CAE718258672005458ED /* Foundation.framework */,
+				ADA4CAE918258672005458ED /* CoreGraphics.framework */,
+				ADA4CAEB18258672005458ED /* UIKit.framework */,
+				ADA4CB0618258672005458ED /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADA4CAED18258672005458ED /* Sailing */ = {
+			isa = PBXGroup;
+			children = (
+				ADF04E241827FB62009369BB /* External */,
+				ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */,
+				ADA4CB2218258896005458ED /* Classes */,
+				ADA4CAF618258672005458ED /* AppDelegate.h */,
+				ADA4CAF718258672005458ED /* AppDelegate.m */,
+				ADA4CAF918258672005458ED /* Main.storyboard */,
+				ADA4CAFF18258672005458ED /* Images.xcassets */,
+				ADA4CAEE18258672005458ED /* Supporting Files */,
+				ADC0272418269C5A001E324F /* WindViewController.h */,
+				ADC0272518269C5A001E324F /* WindViewController.m */,
+				ADC027271826BBE0001E324F /* MainViewController.h */,
+				ADC027281826BBE0001E324F /* MainViewController.m */,
+			);
+			path = Sailing;
+			sourceTree = "<group>";
+		};
+		ADA4CAEE18258672005458ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4CAEF18258672005458ED /* Sailing-Info.plist */,
+				ADA4CAF018258672005458ED /* InfoPlist.strings */,
+				ADA4CAF318258672005458ED /* main.m */,
+				ADA4CAF518258672005458ED /* Sailing-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADA4CB0C18258672005458ED /* SailingTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4CB1218258672005458ED /* SailingTests.m */,
+				ADA4CB0D18258672005458ED /* Supporting Files */,
+			);
+			path = SailingTests;
+			sourceTree = "<group>";
+		};
+		ADA4CB0D18258672005458ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4CB0E18258672005458ED /* SailingTests-Info.plist */,
+				ADA4CB0F18258672005458ED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADA4CB2218258896005458ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADA4CB1C18258696005458ED /* Boat.h */,
+				ADA4CB1D18258696005458ED /* Boat.m */,
+				ADA4CB1F18258889005458ED /* Wind.h */,
+				ADA4CB2018258889005458ED /* Wind.m */,
+				ADA4CB231826574F005458ED /* Enums.h */,
+				ADF04E211827EF64009369BB /* Helper.h */,
+				ADF04E221827EF64009369BB /* Helper.m */,
+				ADCC6A5D1828E35E0079F528 /* Routing.h */,
+				ADCC6A5E1828E35E0079F528 /* Routing.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		ADF04E241827FB62009369BB /* External */ = {
+			isa = PBXGroup;
+			children = (
+				ADF04E5F18285B06009369BB /* schenectady.mbtiles */,
+				ADF04E49182803A5009369BB /* SocketRocket */,
+				ADC027341826E3AB001E324F /* MapBox.bundle */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		ADF04E49182803A5009369BB /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				ADF04E4A182803A5009369BB /* base64.m */,
+				ADF04E4B182803A5009369BB /* base64.h */,
+				ADF04E4C182803A5009369BB /* NSData+SRB64Additions.h */,
+				ADF04E4D182803A5009369BB /* NSData+SRB64Additions.m */,
+				ADF04E4F182803A5009369BB /* SRWebSocket.h */,
+				ADF04E50182803A5009369BB /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADA4CAE318258672005458ED /* Sailing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA4CB1618258672005458ED /* Build configuration list for PBXNativeTarget "Sailing" */;
+			buildPhases = (
+				ADA4CAE018258672005458ED /* Sources */,
+				ADA4CAE118258672005458ED /* Frameworks */,
+				ADA4CAE218258672005458ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sailing;
+			productName = Sailing;
+			productReference = ADA4CAE418258672005458ED /* Sailing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADA4CB0418258672005458ED /* SailingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA4CB1918258672005458ED /* Build configuration list for PBXNativeTarget "SailingTests" */;
+			buildPhases = (
+				ADA4CB0118258672005458ED /* Sources */,
+				ADA4CB0218258672005458ED /* Frameworks */,
+				ADA4CB0318258672005458ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADA4CB0B18258672005458ED /* PBXTargetDependency */,
+			);
+			name = SailingTests;
+			productName = SailingTests;
+			productReference = ADA4CB0518258672005458ED /* SailingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADA4CADC18258672005458ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Thomas Brüggemann";
+				TargetAttributes = {
+					ADA4CB0418258672005458ED = {
+						TestTargetID = ADA4CAE318258672005458ED;
+					};
+				};
+			};
+			buildConfigurationList = ADA4CADF18258672005458ED /* Build configuration list for PBXProject "Sailing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADA4CADB18258672005458ED;
+			productRefGroup = ADA4CAE518258672005458ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADA4CAE318258672005458ED /* Sailing */,
+				ADA4CB0418258672005458ED /* SailingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADA4CAE218258672005458ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADC027351826E3AB001E324F /* MapBox.bundle in Resources */,
+				ADA4CB0018258672005458ED /* Images.xcassets in Resources */,
+				ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */,
+				ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */,
+				ADF04E6018285B06009369BB /* schenectady.mbtiles in Resources */,
+				ADA4CAFB18258672005458ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA4CB0318258672005458ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA4CB1118258672005458ED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADA4CAE018258672005458ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA4CB2118258889005458ED /* Wind.m in Sources */,
+				ADC027291826BBE0001E324F /* MainViewController.m in Sources */,
+				ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */,
+				ADA4CAF818258672005458ED /* AppDelegate.m in Sources */,
+				ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */,
+				ADA4CAF418258672005458ED /* main.m in Sources */,
+				ADF04E231827EF64009369BB /* Helper.m in Sources */,
+				ADC0272618269C5A001E324F /* WindViewController.m in Sources */,
+				ADCC6A5F1828E35E0079F528 /* Routing.m in Sources */,
+				ADF04E51182803A5009369BB /* base64.m in Sources */,
+				ADA4CB1E18258696005458ED /* Boat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA4CB0118258672005458ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA4CB1318258672005458ED /* SailingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADA4CB0B18258672005458ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADA4CAE318258672005458ED /* Sailing */;
+			targetProxy = ADA4CB0A18258672005458ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADA4CAF018258672005458ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA4CAF118258672005458ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ADA4CAF918258672005458ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA4CAFA18258672005458ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADA4CB0F18258672005458ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA4CB1018258672005458ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADA4CB1418258672005458ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ADA4CB1518258672005458ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADA4CB1718258672005458ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing/Sailing,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
+				INFOPLIST_FILE = "Sailing/Sailing-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ADA4CB1818258672005458ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing/Sailing,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
+				INFOPLIST_FILE = "Sailing/Sailing-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ADA4CB1A18258672005458ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sailing.app/Sailing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SailingTests/SailingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ADA4CB1B18258672005458ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sailing.app/Sailing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
+				INFOPLIST_FILE = "SailingTests/SailingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADA4CADF18258672005458ED /* Build configuration list for PBXProject "Sailing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA4CB1418258672005458ED /* Debug */,
+				ADA4CB1518258672005458ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA4CB1618258672005458ED /* Build configuration list for PBXNativeTarget "Sailing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA4CB1718258672005458ED /* Debug */,
+				ADA4CB1818258672005458ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA4CB1918258672005458ED /* Build configuration list for PBXNativeTarget "SailingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA4CB1A18258672005458ED /* Debug */,
+				ADA4CB1B18258672005458ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADA4CADC18258672005458ED /* Project object */;
+}
