@@ -25,7 +25,8 @@
 - (BOOL)isWater:(TBPoint *)point
 {
     // there are no polygons
-    if (self.polygons.count <= 0) {
+    if (self.polygons.count <= 0)
+    {
         return NO;
     }
     
@@ -57,7 +58,7 @@
     // test every polygon in the sorted array
     for (TBPolygon *polygon in sortedPolygons)
     {
-        if ([polygon isPointInPolygon:point])
+        if ([polygon isPointInPolygon:point] == YES)
         {
             return YES;
         }

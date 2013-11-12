@@ -29,7 +29,7 @@
 /*
  returns the latitude
  */
-- (double)getLatitude
+- (CLLocationDegrees)getLatitude
 {
     return self.coordinate.latitude;
 }
@@ -37,7 +37,7 @@
 /* 
  returns the longitude
  */
-- (double)getLongitude
+- (CLLocationDegrees)getLongitude
 {
     return self.coordinate.longitude;
 }
@@ -45,7 +45,7 @@
 /*
  returns the distance to the point in meters
  */
-- (double)distanceToPoint:(TBPoint *)point
+- (CLLocationDistance)distanceToPoint:(TBPoint *)point
 {
     return [self distanceFromLocation:point];
 }

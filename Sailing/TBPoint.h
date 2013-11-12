@@ -12,8 +12,8 @@
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
 - (CLLocationCoordinate2D)getCoordinate;
-- (double)getLatitude;
-- (double)getLongitude;
-- (double)distanceToPoint:(TBPoint *)point;
+- (CLLocationDegrees)getLatitude;
+- (CLLocationDegrees)getLongitude;
+- (CLLocationDistance)distanceToPoint:(TBPoint *)point;
 
 @end

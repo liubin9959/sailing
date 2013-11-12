@@ -15,6 +15,7 @@
 @property TBPoint *centroid;
 
 - (id)init;
+- (id)initWithPoints:(NSArray *)points;
 - (void)add:(TBPoint *)point;
 - (TBPoint *)computeCentroid;
 - (TBPoint *)getPointAt:(int)index;

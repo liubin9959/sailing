@@ -16,6 +16,12 @@
     return self;
 }
 
+- (id)initWithPoints:(NSArray *)points
+{
+    self.members = [[NSMutableArray alloc] initWithArray:points];
+    return self;
+}
+
 /* 
  add polygon member 
  */
@@ -109,6 +115,7 @@
     TBPoint *next;
     
     // loop through all edges of the polygon
+    
     for(int i = 0; i < self.members.count; i++)
     {
         current = [self getPointAt:i];

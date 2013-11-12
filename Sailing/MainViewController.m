@@ -83,8 +83,10 @@
     [self.mapView setCenterCoordinate:self.lastPosition.coordinate animated:YES];
     
     // draw path
-    if (location.horizontalAccuracy <= 5) {
-        if (self.path == nil) {
+    if (location.horizontalAccuracy <= 5)
+    {
+        if (self.path == nil)
+        {
             self.path = [[RMShape alloc] initWithView:self.mapView];
             self.path.lineColor = [UIColor redColor];
             self.path.lineWidth = 2;
@@ -103,13 +105,15 @@
     // course
     appDelegate.boat.heading = location.course;
 
-    if (location.course > 0) {
+    if (location.course > 0)
+    {
         self.courseLabel.text = [NSString stringWithFormat:@"%.0f° (%@)", location.course, [TBHelper courseToDirection:location.course]];
     }
     
     // speed
     double knots = 0;
-    if (location.speed > 0) {
+    if (location.speed > 0)
+    {
         knots = location.speed * 1.94384449;
     }
     self.speedLabel.text = [NSString stringWithFormat:@"%.1f kn", knots];
@@ -157,8 +161,8 @@
     NSLog(@"Received \"%@\"", message);
     
     // check if the message could be a location
-    if (![message isEqualToString:@"CONNECTED"]) {
-
+    if (![message isEqualToString:@"CONNECTED"])
+    {
         NSMutableString *mutable = [NSMutableString stringWithString:message];
         [mutable setString: [mutable stringByReplacingOccurrencesOfString:@"(" withString:@""]];
         [mutable setString: [mutable stringByReplacingOccurrencesOfString:@")" withString:@""]];
