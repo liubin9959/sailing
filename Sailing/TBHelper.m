@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Thomas Brüggemann. All rights reserved.
 //
 
-#import "Helper.h"
+#import "TBHelper.h"
 #import <math.h>
 
-@implementation Helper
+@implementation TBHelper
 
 + (NSString *)courseToDirection:(double)course
 {

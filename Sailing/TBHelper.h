@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #include <CoreLocation/CoreLocation.h>
 
-@interface Helper : NSObject
+@interface TBHelper : NSObject
 
 + (NSString *)courseToDirection:(double)course;
 

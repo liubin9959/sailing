@@ -8,9 +8,9 @@
 
 #import "MainViewController.h"
 #import "AppDelegate.h"
-#import "Enums.h"
+#import "TBEnums.h"
 #import "WindViewController.h"
-#import "Helper.h"
+#import "TBHelper.h"
 #import "SRWebSocket.h"
 #import <MapBox/RMOpenSeaMapSource.h>
 
@@ -35,9 +35,7 @@
     [self.locationManager startUpdatingLocation];
     
     // Map
-    RMMBTilesSource *offline = [[RMMBTilesSource alloc] initWithTileSetResource:@"schenectady" ofType:@"mbtiles"];
-    
-    self.mapView.tileSource = offline;
+    self.mapView.tileSource = [[RMMapBoxSource alloc] initWithMapID:@"tomaszbrue.g91ic4gb"];
     self.mapView.centerCoordinate = CLLocationCoordinate2DMake(0, 0);
     self.mapView.userTrackingMode = RMUserTrackingModeFollow;
     self.mapView.minZoom = 1;
@@ -106,7 +104,7 @@
     appDelegate.boat.heading = location.course;
 
     if (location.course > 0) {
-        self.courseLabel.text = [NSString stringWithFormat:@"%.0f° (%@)", location.course, [Helper courseToDirection:location.course]];
+        self.courseLabel.text = [NSString stringWithFormat:@"%.0f° (%@)", location.course, [TBHelper courseToDirection:location.course]];
     }
     
     // speed

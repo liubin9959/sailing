@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Thomas Brüggemann. All rights reserved.
 //
 
-#import "Wind.h"
+#import "TBWind.h"
 
-@implementation Wind
+@implementation TBWind
 
 @end

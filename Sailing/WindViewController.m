@@ -44,7 +44,7 @@
     appDelegate.wind.heading = self.lastHeading;
     [self.locationManager stopUpdatingHeading];
     
-    self.mainViewController.windLabel.text = [Helper courseToDirection:appDelegate.wind.heading];
+    self.mainViewController.windLabel.text = [TBHelper courseToDirection:appDelegate.wind.heading];
     
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -55,7 +55,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
 {
 	self.lastHeading = newHeading.trueHeading;
-    self.headingLabel.text = [NSString stringWithFormat:@"%@", [Helper courseToDirection:self.lastHeading]];
+    self.headingLabel.text = [NSString stringWithFormat:@"%@", [TBHelper courseToDirection:self.lastHeading]];
 }
 
 @end

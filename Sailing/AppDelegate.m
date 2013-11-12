@@ -13,10 +13,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // wind
-    self.wind = [[Wind alloc] init];
+    self.wind = [[TBWind alloc] init];
     
     // boat
-    self.boat = [[Boat alloc] init];
+    self.boat = [[TBBoat alloc] init];
     self.boat.wind = self.wind;
 
     return YES;

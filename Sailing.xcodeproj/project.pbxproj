@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD42F5651832853500E8632A /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42F5641832853500E8632A /* MapBox.framework */; };
+		AD42F56818328B9E00E8632A /* TBPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56718328B9E00E8632A /* TBPolygon.m */; };
+		AD42F56A1832B88400E8632A /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD42F5691832B88400E8632A /* MapBox.bundle */; };
+		AD42F56D1832D3B200E8632A /* TBSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56C1832D3B200E8632A /* TBSphere.m */; };
+		AD42F5701832DA2300E8632A /* TBPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56F1832DA2300E8632A /* TBPoint.m */; };
 		ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CAF018258672005458ED /* InfoPlist.strings */; };
 		ADA4CAF418258672005458ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF318258672005458ED /* main.m */; };
 		ADA4CAF818258672005458ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF718258672005458ED /* AppDelegate.m */; };
@@ -17,14 +22,13 @@
 		ADA4CB0918258672005458ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAEB18258672005458ED /* UIKit.framework */; };
 		ADA4CB1118258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB0F18258672005458ED /* InfoPlist.strings */; };
 		ADA4CB1318258672005458ED /* SailingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1218258672005458ED /* SailingTests.m */; };
-		ADA4CB1E18258696005458ED /* Boat.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1D18258696005458ED /* Boat.m */; };
+		ADA4CB1E18258696005458ED /* TBBoat.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1D18258696005458ED /* TBBoat.m */; };
 		ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */; };
-		ADAE9CCC1828EAE800A4C936 /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9CCB1828EAE800A4C936 /* Wind.m */; };
+		ADAE9CCC1828EAE800A4C936 /* TBWind.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9CCB1828EAE800A4C936 /* TBWind.m */; };
 		ADC0272618269C5A001E324F /* WindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0272518269C5A001E324F /* WindViewController.m */; };
 		ADC027291826BBE0001E324F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC027281826BBE0001E324F /* MainViewController.m */; };
-		ADC027351826E3AB001E324F /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADC027341826E3AB001E324F /* MapBox.bundle */; };
-		ADCC6A5F1828E35E0079F528 /* Routing.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCC6A5E1828E35E0079F528 /* Routing.m */; };
-		ADF04E231827EF64009369BB /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E221827EF64009369BB /* Helper.m */; };
+		ADCC6A5F1828E35E0079F528 /* TBRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCC6A5E1828E35E0079F528 /* TBRouting.m */; };
+		ADF04E231827EF64009369BB /* TBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E221827EF64009369BB /* TBHelper.m */; };
 		ADF04E51182803A5009369BB /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E4A182803A5009369BB /* base64.m */; };
 		ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E4D182803A5009369BB /* NSData+SRB64Additions.m */; };
 		ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E50182803A5009369BB /* SRWebSocket.m */; };
@@ -37,9 +41,7 @@
 		ADF04E5A18280769009369BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CB2418265FF8005458ED /* QuartzCore.framework */; };
 		ADF04E5B1828076F009369BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAE918258672005458ED /* CoreGraphics.framework */; };
 		ADF04E5C1828077A009369BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAEB18258672005458ED /* UIKit.framework */; };
-		ADF04E5D18280787009369BB /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC0272A1826C2BB001E324F /* MapBox.framework */; };
 		ADF04E5E1828079A009369BB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF04E321827FBBA009369BB /* CFNetwork.framework */; };
-		ADF04E6018285B06009369BB /* schenectady.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADF04E5F18285B06009369BB /* schenectady.mbtiles */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD42F5641832853500E8632A /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
+		AD42F56618328B9E00E8632A /* TBPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPolygon.h; sourceTree = "<group>"; };
+		AD42F56718328B9E00E8632A /* TBPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPolygon.m; sourceTree = "<group>"; };
+		AD42F5691832B88400E8632A /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MapBox.bundle; path = MapBox.framework/Versions/A/Resources/MapBox.bundle; sourceTree = SOURCE_ROOT; };
+		AD42F56B1832D3B200E8632A /* TBSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSphere.h; sourceTree = "<group>"; };
+		AD42F56C1832D3B200E8632A /* TBSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSphere.m; sourceTree = "<group>"; };
+		AD42F56E1832DA2300E8632A /* TBPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPoint.h; sourceTree = "<group>"; };
+		AD42F56F1832DA2300E8632A /* TBPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPoint.m; sourceTree = "<group>"; };
 		ADA4CAE418258672005458ED /* Sailing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sailing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA4CAE718258672005458ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADA4CAE918258672005458ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,26 +80,24 @@
 		ADA4CB0E18258672005458ED /* SailingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SailingTests-Info.plist"; sourceTree = "<group>"; };
 		ADA4CB1018258672005458ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ADA4CB1218258672005458ED /* SailingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SailingTests.m; sourceTree = "<group>"; };
-		ADA4CB1C18258696005458ED /* Boat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boat.h; sourceTree = "<group>"; };
-		ADA4CB1D18258696005458ED /* Boat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Boat.m; sourceTree = "<group>"; };
-		ADA4CB231826574F005458ED /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		ADA4CB1C18258696005458ED /* TBBoat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBoat.h; sourceTree = "<group>"; };
+		ADA4CB1D18258696005458ED /* TBBoat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBoat.m; sourceTree = "<group>"; };
+		ADA4CB231826574F005458ED /* TBEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEnums.h; sourceTree = "<group>"; };
 		ADA4CB2418265FF8005458ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ADA4CB2618265FFE005458ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "297px-Yellow_Arrow_Up.png"; sourceTree = "<group>"; };
-		ADAE9CCA1828EAE800A4C936 /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wind.h; sourceTree = "<group>"; };
-		ADAE9CCB1828EAE800A4C936 /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wind.m; sourceTree = "<group>"; };
+		ADAE9CCA1828EAE800A4C936 /* TBWind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBWind.h; sourceTree = "<group>"; };
+		ADAE9CCB1828EAE800A4C936 /* TBWind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBWind.m; sourceTree = "<group>"; };
 		ADC0272418269C5A001E324F /* WindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindViewController.h; sourceTree = "<group>"; };
 		ADC0272518269C5A001E324F /* WindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindViewController.m; sourceTree = "<group>"; };
 		ADC027271826BBE0001E324F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		ADC027281826BBE0001E324F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		ADC0272A1826C2BB001E324F /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
 		ADC0272C1826C2FD001E324F /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		ADC0272E1826C304001E324F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		ADC027341826E3AB001E324F /* MapBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MapBox.bundle; path = MapBox.framework/Versions/A/Resources/MapBox.bundle; sourceTree = SOURCE_ROOT; };
-		ADCC6A5D1828E35E0079F528 /* Routing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Routing.h; sourceTree = "<group>"; };
-		ADCC6A5E1828E35E0079F528 /* Routing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Routing.m; sourceTree = "<group>"; };
-		ADF04E211827EF64009369BB /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
-		ADF04E221827EF64009369BB /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		ADCC6A5D1828E35E0079F528 /* TBRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRouting.h; sourceTree = "<group>"; };
+		ADCC6A5E1828E35E0079F528 /* TBRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRouting.m; sourceTree = "<group>"; };
+		ADF04E211827EF64009369BB /* TBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHelper.h; sourceTree = "<group>"; };
+		ADF04E221827EF64009369BB /* TBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHelper.m; sourceTree = "<group>"; };
 		ADF04E301827FBB0009369BB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		ADF04E321827FBBA009369BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ADF04E341827FBC3009369BB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -99,7 +107,6 @@
 		ADF04E4D182803A5009369BB /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
 		ADF04E4F182803A5009369BB /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		ADF04E50182803A5009369BB /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		ADF04E5F18285B06009369BB /* schenectady.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = schenectady.mbtiles; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +119,11 @@
 				ADF04E5B1828076F009369BB /* CoreGraphics.framework in Frameworks */,
 				ADF04E5A18280769009369BB /* QuartzCore.framework in Frameworks */,
 				ADF04E5918280764009369BB /* CoreLocation.framework in Frameworks */,
+				AD42F5651832853500E8632A /* MapBox.framework in Frameworks */,
 				ADF04E581828075E009369BB /* libsqlite3.dylib in Frameworks */,
 				ADF04E5718280740009369BB /* libz.dylib in Frameworks */,
 				ADF04E561828073A009369BB /* libicucore.dylib in Frameworks */,
 				ADF04E5518280733009369BB /* Security.framework in Frameworks */,
-				ADF04E5D18280787009369BB /* MapBox.framework in Frameworks */,
 				ADF04E541828072A009369BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,12 +163,12 @@
 		ADA4CAE618258672005458ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD42F5641832853500E8632A /* MapBox.framework */,
 				ADF04E341827FBC3009369BB /* Security.framework */,
 				ADF04E321827FBBA009369BB /* CFNetwork.framework */,
 				ADF04E301827FBB0009369BB /* libicucore.dylib */,
 				ADC0272E1826C304001E324F /* libz.dylib */,
 				ADC0272C1826C2FD001E324F /* libsqlite3.dylib */,
-				ADC0272A1826C2BB001E324F /* MapBox.framework */,
 				ADA4CB2618265FFE005458ED /* CoreLocation.framework */,
 				ADA4CB2418265FF8005458ED /* QuartzCore.framework */,
 				ADA4CAE718258672005458ED /* Foundation.framework */,
@@ -223,15 +230,21 @@
 		ADA4CB2218258896005458ED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ADAE9CCA1828EAE800A4C936 /* Wind.h */,
-				ADAE9CCB1828EAE800A4C936 /* Wind.m */,
-				ADA4CB1C18258696005458ED /* Boat.h */,
-				ADA4CB1D18258696005458ED /* Boat.m */,
-				ADA4CB231826574F005458ED /* Enums.h */,
-				ADF04E211827EF64009369BB /* Helper.h */,
-				ADF04E221827EF64009369BB /* Helper.m */,
-				ADCC6A5D1828E35E0079F528 /* Routing.h */,
-				ADCC6A5E1828E35E0079F528 /* Routing.m */,
+				ADAE9CCA1828EAE800A4C936 /* TBWind.h */,
+				ADAE9CCB1828EAE800A4C936 /* TBWind.m */,
+				ADA4CB1C18258696005458ED /* TBBoat.h */,
+				ADA4CB1D18258696005458ED /* TBBoat.m */,
+				ADA4CB231826574F005458ED /* TBEnums.h */,
+				ADF04E211827EF64009369BB /* TBHelper.h */,
+				ADF04E221827EF64009369BB /* TBHelper.m */,
+				ADCC6A5D1828E35E0079F528 /* TBRouting.h */,
+				ADCC6A5E1828E35E0079F528 /* TBRouting.m */,
+				AD42F56618328B9E00E8632A /* TBPolygon.h */,
+				AD42F56718328B9E00E8632A /* TBPolygon.m */,
+				AD42F56B1832D3B200E8632A /* TBSphere.h */,
+				AD42F56C1832D3B200E8632A /* TBSphere.m */,
+				AD42F56E1832DA2300E8632A /* TBPoint.h */,
+				AD42F56F1832DA2300E8632A /* TBPoint.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -239,9 +252,8 @@
 		ADF04E241827FB62009369BB /* External */ = {
 			isa = PBXGroup;
 			children = (
-				ADF04E5F18285B06009369BB /* schenectady.mbtiles */,
+				AD42F5691832B88400E8632A /* MapBox.bundle */,
 				ADF04E49182803A5009369BB /* SocketRocket */,
-				ADC027341826E3AB001E324F /* MapBox.bundle */,
 			);
 			name = External;
 			sourceTree = "<group>";
@@ -335,11 +347,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC027351826E3AB001E324F /* MapBox.bundle in Resources */,
 				ADA4CB0018258672005458ED /* Images.xcassets in Resources */,
+				AD42F56A1832B88400E8632A /* MapBox.bundle in Resources */,
 				ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */,
 				ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */,
-				ADF04E6018285B06009369BB /* schenectady.mbtiles in Resources */,
 				ADA4CAFB18258672005458ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,16 +371,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC027291826BBE0001E324F /* MainViewController.m in Sources */,
-				ADAE9CCC1828EAE800A4C936 /* Wind.m in Sources */,
+				AD42F56D1832D3B200E8632A /* TBSphere.m in Sources */,
+				AD42F5701832DA2300E8632A /* TBPoint.m in Sources */,
+				ADAE9CCC1828EAE800A4C936 /* TBWind.m in Sources */,
 				ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */,
 				ADA4CAF818258672005458ED /* AppDelegate.m in Sources */,
+				AD42F56818328B9E00E8632A /* TBPolygon.m in Sources */,
 				ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */,
 				ADA4CAF418258672005458ED /* main.m in Sources */,
-				ADF04E231827EF64009369BB /* Helper.m in Sources */,
+				ADF04E231827EF64009369BB /* TBHelper.m in Sources */,
 				ADC0272618269C5A001E324F /* WindViewController.m in Sources */,
-				ADCC6A5F1828E35E0079F528 /* Routing.m in Sources */,
+				ADCC6A5F1828E35E0079F528 /* TBRouting.m in Sources */,
 				ADF04E51182803A5009369BB /* base64.m in Sources */,
-				ADA4CB1E18258696005458ED /* Boat.m in Sources */,
+				ADA4CB1E18258696005458ED /* TBBoat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,12 +513,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing/Sailing,
+					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
 				INFOPLIST_FILE = "Sailing/Sailing-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -517,12 +533,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing/Sailing,
+					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
 				INFOPLIST_FILE = "Sailing/Sailing-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

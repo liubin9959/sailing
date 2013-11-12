@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Thomas Brüggemann. All rights reserved.
 //
 
-#import "Boat.h"
+#import "TBBoat.h"
 
-@implementation Boat
+@implementation TBBoat
 
 // returns the position of the boom
 - (enum SIDE)getBoom {

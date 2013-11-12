@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Wind.h"
-#import "Enums.h"
+#import "TBWind.h"
+#import "TBEnums.h"
 
-@interface Boat : NSObject
+@interface TBBoat : NSObject
 
 // hard facts
 @property double heading;
@@ -21,7 +21,7 @@
 @property int course;
 
 // wind facts
-@property (nonatomic, retain) Wind *wind;
+@property (nonatomic, retain) TBWind *wind;
 
 // Methods
 - (enum SIDE)getBoom;

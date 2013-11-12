@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Wind : NSObject
+@interface TBWind : NSObject
 
 @property double speed;
 @property double heading;

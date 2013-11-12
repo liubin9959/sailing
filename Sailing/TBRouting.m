@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Thomas Brüggemann. All rights reserved.
 //
 
-#import "Routing.h"
+#import "TBRouting.h"
 
-@implementation Routing
+@implementation TBRouting
 
-- (id)initWithBoat:(Boat *)boat andWind:(Wind *)wind andFinalDestination:(CLLocationCoordinate2D)destination
+- (id)initWithBoat:(TBBoat *)boat andWind:(TBWind *)wind andFinalDestination:(CLLocationCoordinate2D)destination
 {
     self.boat = boat;
     self.wind = wind;

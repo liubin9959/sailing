@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Wind.h"
-#import "Boat.h"
+#import "TBWind.h"
+#import "TBBoat.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 // physical
-@property Boat *boat;
-@property Wind *wind;
+@property TBBoat *boat;
+@property TBWind *wind;
 
 @end
