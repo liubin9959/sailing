@@ -7,6 +7,7 @@
 //
 
 #import "TBSphere.h"
+#import "SQLiteManager.h"
 
 @implementation TBSphere
 
@@ -17,6 +18,15 @@
 {
     self.polygons = [[NSMutableArray alloc] initWithArray:members];
     return self;
+}
+
+/*
+ loads the sphere data from open street map data in
+ form oh a sqlite database 
+ */
+- (void)loadFromDB:(NSString *)path
+{
+    SQLiteManager *dbManager = [[SQLiteManager alloc] initWithDatabaseNamed:@"osm.db"];
 }
 
 /* 

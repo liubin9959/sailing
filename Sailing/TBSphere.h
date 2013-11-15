@@ -15,5 +15,6 @@
 
 - (id)initWithPolygons:(NSArray *)members;
 - (BOOL)isWater:(TBPoint *)point;
+- (void)loadFromDB:(NSString *)path;
 
 @end

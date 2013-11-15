@@ -29,11 +29,21 @@
     TBPoint *p4 = [[TBPoint alloc] initWithLatitude:6 longitude:2];
     TBPoint *p5 = [[TBPoint alloc] initWithLatitude:3 longitude:1];
     
-    TBPolygon *poly = [[TBPolygon alloc] initWithPoints:@[p1, p2, p3, p4, p5]];
+    TBPolygon *poly = [[TBPolygon alloc] initWithOuter:@[p1, p2, p3, p4, p5]];
     TBSphere *sphere = [[TBSphere alloc] initWithPolygons:@[poly]];
     
-    TBPoint *test = [[TBPoint alloc] initWithLatitude:2 longitude:2];
-    NSLog(@"%@", [sphere isWater:test]);
+    TBPoint *test = [[TBPoint alloc] initWithLatitude:12 longitude:21];
+    
+    NSLog(@"start");
+    if ([sphere isWater:test])
+    {
+        NSLog(@"ist wasser");
+    }
+    else
+    {
+        NSLog(@"ist kein wasser");
+    }
+    NSLog(@"start");
 
     return YES;
 }

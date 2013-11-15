@@ -12,13 +12,24 @@
 
 - (id)init
 {
-    self.members = [[NSMutableArray alloc] init];
+    self.outer = [[NSMutableArray alloc] init];
+    self.inner = [[NSMutableArray alloc] init];
     return self;
 }
 
-- (id)initWithPoints:(NSArray *)points
+- (id)initWithOuter:(NSArray *)points
 {
-    self.members = [[NSMutableArray alloc] initWithArray:points];
+    self.outer = [[NSMutableArray alloc] initWithArray:points];
+    self.inner = [[NSMutableArray alloc] init];
+
+    return self;
+}
+
+- (id)initWithOuter:(NSArray *)outerPoints andInner:(NSArray *)innerPoints
+{
+    self.outer = [[NSMutableArray alloc] initWithArray:outerPoints];
+    self.inner = [[NSMutableArray alloc] initWithArray:innerPoints];
+    
     return self;
 }
 
@@ -27,7 +38,7 @@
  */
 - (void)add:(TBPoint *)point
 {
-    [self.members addObject:point];
+    [self.outer addObject:point];
 }
 
 /* 
@@ -36,7 +47,7 @@
  */
 - (TBPoint *)getPointAt:(int)index
 {
-    return ((TBPoint *)[self.members objectAtIndex:index]);
+    return ((TBPoint *)[self.outer objectAtIndex:index]);
 }
 
 /* 
@@ -59,7 +70,7 @@
     
     // for all vertices except last one
     int i = 0;
-    for(i = 0; i < self.members.count - 1; i++)
+    for(i = 0; i < self.outer.count - 1; i++)
     {
         current = [[self getPointAt:i] getCoordinate];
         next = [[self getPointAt:i + 1] getCoordinate];
@@ -116,10 +127,19 @@
     
     // loop through all edges of the polygon
     
-    for(int i = 0; i < self.members.count; i++)
+    for(int i = 0; i < self.outer.count; i++)
     {
         current = [self getPointAt:i];
-        next = [self getPointAt:i + 1];
+        
+        // n+1 = 0
+        if ((i + 1) >= self.outer.count)
+        {
+            next = [self getPointAt:0];
+        }
+        else
+        {
+            next = [self getPointAt:i + 1];
+        }
         
         // start y <= p.y
         if ([current getLongitude] <= [p getLongitude])
@@ -149,7 +169,36 @@
         }
     }
     
-    return (wn != 0);
+    // lies outside if wn == 0
+    BOOL result = (wn != 0);
+    
+    // if ithe point lies inside, we have to check if there are inner
+    // polygons and exclude them from the calculation
+    if (result == NO)
+    {
+        return NO;
+    }
+    else
+    {
+        if (self.inner.count == 0)
+        {
+            return YES;
+        }
+        else
+        {
+            // check if the point lies in any of the inner polygons.
+            // if YES, then the answer of this function is: NO
+            // if NO, then the answer of this function is: YES
+            for(TBPolygon *innerPolygon in self.inner)
+            {
+                if ([innerPolygon isPointInPolygon:p]) {
+                    return NO;
+                }
+            }
+            
+            return YES;
+        }
+    }
 }
 
 @end

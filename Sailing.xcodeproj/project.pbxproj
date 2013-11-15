@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD38C5F2183531BE008D1FAB /* osm.db in Resources */ = {isa = PBXBuildFile; fileRef = AD38C5F1183531BE008D1FAB /* osm.db */; };
 		AD42F5651832853500E8632A /* MapBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42F5641832853500E8632A /* MapBox.framework */; };
 		AD42F56818328B9E00E8632A /* TBPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56718328B9E00E8632A /* TBPolygon.m */; };
 		AD42F56A1832B88400E8632A /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD42F5691832B88400E8632A /* MapBox.bundle */; };
 		AD42F56D1832D3B200E8632A /* TBSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56C1832D3B200E8632A /* TBSphere.m */; };
 		AD42F5701832DA2300E8632A /* TBPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56F1832DA2300E8632A /* TBPoint.m */; };
+		AD74A8521835F70A006F6BCE /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD74A8511835F70A006F6BCE /* SQLiteManager.m */; };
 		ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CAF018258672005458ED /* InfoPlist.strings */; };
 		ADA4CAF418258672005458ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF318258672005458ED /* main.m */; };
 		ADA4CAF818258672005458ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF718258672005458ED /* AppDelegate.m */; };
@@ -20,8 +22,6 @@
 		ADA4CB0718258672005458ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CB0618258672005458ED /* XCTest.framework */; };
 		ADA4CB0818258672005458ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAE718258672005458ED /* Foundation.framework */; };
 		ADA4CB0918258672005458ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA4CAEB18258672005458ED /* UIKit.framework */; };
-		ADA4CB1118258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB0F18258672005458ED /* InfoPlist.strings */; };
-		ADA4CB1318258672005458ED /* SailingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1218258672005458ED /* SailingTests.m */; };
 		ADA4CB1E18258696005458ED /* TBBoat.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CB1D18258696005458ED /* TBBoat.m */; };
 		ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CB2818266F38005458ED /* 297px-Yellow_Arrow_Up.png */; };
 		ADAE9CCC1828EAE800A4C936 /* TBWind.m in Sources */ = {isa = PBXBuildFile; fileRef = ADAE9CCB1828EAE800A4C936 /* TBWind.m */; };
@@ -55,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD38C5F1183531BE008D1FAB /* osm.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = osm.db; sourceTree = "<group>"; };
 		AD42F5641832853500E8632A /* MapBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapBox.framework; sourceTree = "<group>"; };
 		AD42F56618328B9E00E8632A /* TBPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPolygon.h; sourceTree = "<group>"; };
 		AD42F56718328B9E00E8632A /* TBPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPolygon.m; sourceTree = "<group>"; };
@@ -63,6 +64,8 @@
 		AD42F56C1832D3B200E8632A /* TBSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSphere.m; sourceTree = "<group>"; };
 		AD42F56E1832DA2300E8632A /* TBPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPoint.h; sourceTree = "<group>"; };
 		AD42F56F1832DA2300E8632A /* TBPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPoint.m; sourceTree = "<group>"; };
+		AD74A8501835F70A006F6BCE /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		AD74A8511835F70A006F6BCE /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
 		ADA4CAE418258672005458ED /* Sailing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sailing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA4CAE718258672005458ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ADA4CAE918258672005458ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,9 +80,6 @@
 		ADA4CAFF18258672005458ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ADA4CB0518258672005458ED /* SailingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SailingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA4CB0618258672005458ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		ADA4CB0E18258672005458ED /* SailingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SailingTests-Info.plist"; sourceTree = "<group>"; };
-		ADA4CB1018258672005458ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ADA4CB1218258672005458ED /* SailingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SailingTests.m; sourceTree = "<group>"; };
 		ADA4CB1C18258696005458ED /* TBBoat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBoat.h; sourceTree = "<group>"; };
 		ADA4CB1D18258696005458ED /* TBBoat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBoat.m; sourceTree = "<group>"; };
 		ADA4CB231826574F005458ED /* TBEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBEnums.h; sourceTree = "<group>"; };
@@ -141,11 +141,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD74A84F1835F6F0006F6BCE /* SQliteManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD74A8501835F70A006F6BCE /* SQLiteManager.h */,
+				AD74A8511835F70A006F6BCE /* SQLiteManager.m */,
+			);
+			name = SQliteManager;
+			sourceTree = "<group>";
+		};
 		ADA4CADB18258672005458ED = {
 			isa = PBXGroup;
 			children = (
 				ADA4CAED18258672005458ED /* Sailing */,
-				ADA4CB0C18258672005458ED /* SailingTests */,
 				ADA4CAE618258672005458ED /* Frameworks */,
 				ADA4CAE518258672005458ED /* Products */,
 			);
@@ -209,24 +217,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ADA4CB0C18258672005458ED /* SailingTests */ = {
-			isa = PBXGroup;
-			children = (
-				ADA4CB1218258672005458ED /* SailingTests.m */,
-				ADA4CB0D18258672005458ED /* Supporting Files */,
-			);
-			path = SailingTests;
-			sourceTree = "<group>";
-		};
-		ADA4CB0D18258672005458ED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ADA4CB0E18258672005458ED /* SailingTests-Info.plist */,
-				ADA4CB0F18258672005458ED /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		ADA4CB2218258896005458ED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +242,8 @@
 		ADF04E241827FB62009369BB /* External */ = {
 			isa = PBXGroup;
 			children = (
+				AD74A84F1835F6F0006F6BCE /* SQliteManager */,
+				AD38C5F1183531BE008D1FAB /* osm.db */,
 				AD42F5691832B88400E8632A /* MapBox.bundle */,
 				ADF04E49182803A5009369BB /* SocketRocket */,
 			);
@@ -348,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA4CB0018258672005458ED /* Images.xcassets in Resources */,
+				AD38C5F2183531BE008D1FAB /* osm.db in Resources */,
 				AD42F56A1832B88400E8632A /* MapBox.bundle in Resources */,
 				ADA4CB2918266F38005458ED /* 297px-Yellow_Arrow_Up.png in Resources */,
 				ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */,
@@ -359,7 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA4CB1118258672005458ED /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +367,7 @@
 				AD42F5701832DA2300E8632A /* TBPoint.m in Sources */,
 				ADAE9CCC1828EAE800A4C936 /* TBWind.m in Sources */,
 				ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */,
+				AD74A8521835F70A006F6BCE /* SQLiteManager.m in Sources */,
 				ADA4CAF818258672005458ED /* AppDelegate.m in Sources */,
 				AD42F56818328B9E00E8632A /* TBPolygon.m in Sources */,
 				ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */,
@@ -391,7 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADA4CB1318258672005458ED /* SailingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,14 +412,6 @@
 				ADA4CAFA18258672005458ED /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ADA4CB0F18258672005458ED /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADA4CB1018258672005458ED /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -518,6 +502,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
 				INFOPLIST_FILE = "Sailing/Sailing-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -538,6 +526,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sailing/Sailing-Prefix.pch";
 				INFOPLIST_FILE = "Sailing/Sailing-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/Macintosh/Users/thomasbruggemann/Sites/sailing,
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 armv7s";

@@ -11,11 +11,14 @@
 
 @interface TBPolygon : NSObject
 
-@property (nonatomic, retain) NSMutableArray *members;
+@property (nonatomic, retain) NSMutableArray *outer;
+@property (nonatomic, retain) NSMutableArray *inner;
 @property TBPoint *centroid;
 
 - (id)init;
-- (id)initWithPoints:(NSArray *)points;
+- (id)initWithOuter:(NSArray *)points;
+- (id)initWithOuter:(NSArray *)outerPoints andInner:(NSArray *)innerPoints;
+
 - (void)add:(TBPoint *)point;
 - (TBPoint *)computeCentroid;
 - (TBPoint *)getPointAt:(int)index;
