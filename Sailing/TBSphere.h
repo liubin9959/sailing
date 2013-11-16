@@ -14,7 +14,7 @@
 @property (nonatomic, retain) NSMutableArray *polygons;
 
 - (id)initWithPolygons:(NSArray *)members;
+- (id)initWithDB:(NSString *)path;
 - (BOOL)isWater:(TBPoint *)point;
-- (void)loadFromDB:(NSString *)path;
 
 @end

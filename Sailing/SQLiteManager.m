@@ -34,10 +34,33 @@
 - (id)initWithDatabaseNamed:(NSString *)name; {
 	self = [super init];
 	if (self != nil) {
+        [self createEditableCopyOfDatabaseIfNeeded:name];
 		databaseName = [[NSString alloc] initWithString:name];
 		db = nil;
 	}
 	return self;
+}
+
+// creates a writable copy of the bundled default database in the application Documents directory.
+- (void)createEditableCopyOfDatabaseIfNeeded:(NSString *)path {
+    
+    // first, test for existence.
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:path];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success)
+        return;
+    
+    // The writable database does not exist, so copy the default to the appropriate location.
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:path];
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
 }
 
 #pragma mark SQLite Operations

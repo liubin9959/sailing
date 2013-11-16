@@ -10,8 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapBox/MapBox.h>
 #import "SRWebSocket.h"
+#import "TBSphere.h"
 
-@interface MainViewController : UIViewController<CLLocationManagerDelegate, SRWebSocketDelegate>
+@interface MainViewController : UIViewController<CLLocationManagerDelegate, SRWebSocketDelegate, RMMapViewDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, strong) IBOutlet RMMapView *mapView;
@@ -19,6 +20,7 @@
 @property (nonatomic, retain) RMShape *path;
 @property (nonatomic, retain) RMAnnotation *annotation;
 @property (nonatomic, retain) NSMutableArray *pathLocations;
+@property (nonatomic, retain) TBSphere *sphere;
 
 @property (nonatomic, retain) IBOutlet UILabel *baumLabel;
 @property (nonatomic, retain) IBOutlet UILabel *windLabel;

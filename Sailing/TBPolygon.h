@@ -19,10 +19,11 @@
 - (id)initWithOuter:(NSArray *)points;
 - (id)initWithOuter:(NSArray *)outerPoints andInner:(NSArray *)innerPoints;
 
-- (void)add:(TBPoint *)point;
-- (TBPoint *)computeCentroid;
+- (void)addOuter:(TBPoint *)point;
+- (void)addInner:(TBPolygon *)polygon;
+
+- (TBPoint *)getClosestTo:(TBPoint *)point;
 - (TBPoint *)getPointAt:(int)index;
-- (int)onWhichSideOfTheLineThrough:(TBPoint *)p0 and:(TBPoint *)p1 is:(TBPoint *)p2;
 - (BOOL)isPointInPolygon:(TBPoint *)p;
 
 @end

@@ -24,13 +24,115 @@
  loads the sphere data from open street map data in
  form oh a sqlite database 
  */
-- (void)loadFromDB:(NSString *)path
+- (id)initWithDB:(NSString *)path
 {
-    SQLiteManager *dbManager = [[SQLiteManager alloc] initWithDatabaseNamed:@"osm.db"];
+    self.polygons = [[NSMutableArray alloc] init];
+    
+    NSMutableArray *wayIds = [[NSMutableArray alloc] init];
+    
+    SQLiteManager *db = [[SQLiteManager alloc] initWithDatabaseNamed:path];
+    
+    // get all relations (= MultiPolygons)
+    for (NSDictionary *relation in [db getRowsForQuery:@"SELECT * FROM Relation"])
+    {
+        // get all ways from this relation
+        int relationId = [[relation objectForKey:@"Id"] integerValue];
+        
+        NSMutableArray *innerWayIds = [[NSMutableArray alloc] init];
+        TBPolygon *polygon = [[TBPolygon alloc] init];
+        
+        for (NSDictionary *relationway in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM RelationWay WHERE RelationId = %i", relationId]])
+        {
+            // get and store way id
+            [wayIds addObject:[relationway objectForKey:@"WayId"]];
+            
+            if ([[relationway objectForKey:@"Role"] isEqualToString:@"outer"])
+            {
+                // get all nodes of this way
+                int wayId = [[relationway objectForKey:@"WayId"] integerValue];
+                for (NSDictionary *waynode in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM WayNode WHERE WayId = %i", wayId]])
+                {
+                    // get node
+                    int nodeId = [[waynode objectForKey:@"NodeId"] integerValue];
+                    for (NSDictionary *node in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM Node WHERE Id = %i", nodeId]])
+                    {
+                        double lat = [[node objectForKey:@"Lat"] doubleValue];
+                        double lon = [[node objectForKey:@"Lon"] doubleValue];
+                        TBPoint *point = [[TBPoint alloc] initWithLatitude:lat longitude:lon];
+                        [polygon addOuter:point];
+                    }
+                }
+            }
+            else
+            {
+                [innerWayIds addObject:[relationway objectForKey:@"WayId"]];
+            }
+        }
+        
+        // loop the inner polygon way candidates
+        for (id way in innerWayIds)
+        {
+            // get all nodes of this way
+            int wayId = [way integerValue];
+            
+            TBPolygon *outer = [[TBPolygon alloc] init];
+            
+            for (NSDictionary *waynode in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM WayNode WHERE WayId = %i", wayId]])
+            {
+                // get node
+                int nodeId = [[waynode objectForKey:@"NodeId"] integerValue];
+                for (NSDictionary *node in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM Node WHERE Id = %i", nodeId]])
+                {
+                    double lat = [[node objectForKey:@"Lat"] doubleValue];
+                    double lon = [[node objectForKey:@"Lon"] doubleValue];
+                    TBPoint *point = [[TBPoint alloc] initWithLatitude:lat longitude:lon];
+                    [outer addOuter:point];
+                }
+            }
+            
+            [polygon addInner:outer];
+        }
+        
+        // add to sphere
+        [self.polygons addObject:polygon];
+    }
+    
+    NSLog(@"Used Way IDs %i", wayIds.count);
+    
+    // Query all the Ways that are not yet queried
+    for (NSDictionary *way in [db getRowsForQuery:@"SELECT * FROM Way"])
+    {
+        // way is not used yet
+        if (![wayIds containsObject:[way objectForKey:@"Id"]])
+        {
+            int wayId = [[way objectForKey:@"Id"] integerValue];
+            TBPolygon *polygon = [[TBPolygon alloc] init];
+            
+            for (NSDictionary *waynode in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM WayNode WHERE WayId = %i", wayId]])
+            {
+                // get node
+                int nodeId = [[waynode objectForKey:@"NodeId"] integerValue];
+                for (NSDictionary *node in [db getRowsForQuery:[NSString stringWithFormat:@"SELECT * FROM Node WHERE Id = %i", nodeId]])
+                {
+                    double lat = [[node objectForKey:@"Lat"] doubleValue];
+                    double lon = [[node objectForKey:@"Lon"] doubleValue];
+                    TBPoint *point = [[TBPoint alloc] initWithLatitude:lat longitude:lon];
+                    [polygon addOuter:point];
+                }
+            }
+            
+            [self.polygons addObject:polygon];
+        }
+    }
+    
+    NSLog(@"%i polygons available", self.polygons.count);
+    
+    
+    return self;
 }
 
-/* 
- returns a YES if the provided point is in water 
+/*
+ returns a YES if the provided point is in water
  */
 - (BOOL)isWater:(TBPoint *)point
 {
@@ -48,8 +150,8 @@
         TBPolygon *second = (TBPolygon*) b;
         
         // calculate their centroids
-        TBPoint *first_c = [first computeCentroid];
-        TBPoint *seconds_c = [second computeCentroid];
+        TBPoint *first_c = [first getClosestTo:point];
+        TBPoint *seconds_c = [second getClosestTo:point];
         
         if ([first_c distanceToPoint:point] > [seconds_c distanceToPoint:point])
         {

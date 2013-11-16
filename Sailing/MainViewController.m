@@ -31,15 +31,20 @@
     self.locationManager.delegate = self;
     self.locationManager.pausesLocationUpdatesAutomatically = YES;
     self.locationManager.activityType = CLActivityTypeOtherNavigation;
-    
-    [self.locationManager startUpdatingLocation];
+    //[self.locationManager startUpdatingLocation];
     
     // Map
     self.mapView.tileSource = [[RMMapBoxSource alloc] initWithMapID:@"tomaszbrue.g91ic4gb"];
     self.mapView.centerCoordinate = CLLocationCoordinate2DMake(0, 0);
-    self.mapView.userTrackingMode = RMUserTrackingModeFollow;
+    //self.mapView.userTrackingMode = RMUserTrackingModeFollow;
     self.mapView.minZoom = 1;
     self.mapView.zoom = 16;
+    self.mapView.delegate = self;
+    
+    // Load OSM data
+     self.sphere = [[TBSphere alloc] initWithDB:@"osm.db"];
+
+    [self addPolygonShape:[self.sphere.polygons objectAtIndex:1]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -62,6 +67,47 @@
     if ([segue.identifier isEqualToString:@"windSelector"]) {
         WindViewController *windViewController = segue.destinationViewController;
         windViewController.mainViewController = self;
+    }
+}
+
+#pragma mark - MapBox
+
+- (void)addPolygonShape:(TBPolygon *)polygon
+{
+    RMShape *shape = [[RMShape alloc] initWithView:self.mapView];
+    shape.lineColor = [UIColor redColor];
+    //shape.fillColor = [UIColor redColor];
+    shape.lineWidth = 1.0;
+    
+    TBPoint *first = (TBPoint *)[polygon.outer objectAtIndex:0];
+    RMAnnotation *annotation = [[RMAnnotation alloc] initWithMapView:self.mapView coordinate:[first getCoordinate] andTitle:@"Polygon"];
+    annotation.layer = shape;
+    [shape moveToCoordinate:[first getCoordinate]];
+    
+    NSMutableArray *locs = [[NSMutableArray alloc] init];
+    for (TBPoint *point in polygon.outer)
+    {
+        [shape addLineToCoordinate:[point getCoordinate]];
+        [locs addObject:[[CLLocation alloc] initWithLatitude:[point getLatitude] longitude:[point getLongitude]]];
+    }
+    
+    [annotation setBoundingBoxFromLocations:locs];
+    [self.mapView addAnnotation:annotation];
+    [self.mapView setCenterCoordinate:[first getCoordinate]];
+}
+
+// a tap on the map evaluates if water or not
+- (void)singleTapOnMap:(RMMapView *)mapView at:(CGPoint)point
+{
+    CLLocationCoordinate2D coord = [mapView pixelToCoordinate:point];
+    TBPoint *test = [[TBPoint alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
+    if ([self.sphere isWater:test])
+    {
+        NSLog(@"ist wasser");
+    }
+    else
+    {
+        NSLog(@"ist kein wasser");
     }
 }
 
