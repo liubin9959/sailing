@@ -10,9 +10,9 @@
 #import "AppDelegate.h"
 #import "TBEnums.h"
 #import "WindViewController.h"
-#import "TBHelper.h"
 #import "SRWebSocket.h"
 #import <MapBox/RMOpenSeaMapSource.h>
+#import "TBPoint.h"
 
 @interface MainViewController ()
 
@@ -124,7 +124,7 @@
     
     // position tracking
     self.lastPosition = location;
-    appDelegate.boat.position = location.coordinate;
+    appDelegate.boat.position = [[TBPoint alloc] initWithCoordinate:location.coordinate];
     
     [self.mapView setCenterCoordinate:self.lastPosition.coordinate animated:YES];
     
@@ -149,11 +149,11 @@
     }
     
     // course
-    appDelegate.boat.heading = location.course;
+    appDelegate.boat.bearing.value = location.course;
 
     if (location.course > 0)
     {
-        self.courseLabel.text = [NSString stringWithFormat:@"%.0f° (%@)", location.course, [TBHelper courseToDirection:location.course]];
+        self.courseLabel.text = [NSString stringWithFormat:@"%.0f° (%@)", location.course, [appDelegate.boat.bearing toDirection]];
     }
     
     // speed

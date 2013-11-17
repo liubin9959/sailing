@@ -13,6 +13,8 @@
 		AD42F56A1832B88400E8632A /* MapBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD42F5691832B88400E8632A /* MapBox.bundle */; };
 		AD42F56D1832D3B200E8632A /* TBSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56C1832D3B200E8632A /* TBSphere.m */; };
 		AD42F5701832DA2300E8632A /* TBPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = AD42F56F1832DA2300E8632A /* TBPoint.m */; };
+		AD59C5331837EE3900182719 /* TBLine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59C5321837EE3900182719 /* TBLine.m */; };
+		AD59C536183918FE00182719 /* TBBearing.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59C535183918FE00182719 /* TBBearing.m */; };
 		AD74A8521835F70A006F6BCE /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD74A8511835F70A006F6BCE /* SQLiteManager.m */; };
 		ADA4CAF218258672005458ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA4CAF018258672005458ED /* InfoPlist.strings */; };
 		ADA4CAF418258672005458ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4CAF318258672005458ED /* main.m */; };
@@ -28,7 +30,6 @@
 		ADC0272618269C5A001E324F /* WindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC0272518269C5A001E324F /* WindViewController.m */; };
 		ADC027291826BBE0001E324F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC027281826BBE0001E324F /* MainViewController.m */; };
 		ADCC6A5F1828E35E0079F528 /* TBRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCC6A5E1828E35E0079F528 /* TBRouting.m */; };
-		ADF04E231827EF64009369BB /* TBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E221827EF64009369BB /* TBHelper.m */; };
 		ADF04E51182803A5009369BB /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E4A182803A5009369BB /* base64.m */; };
 		ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E4D182803A5009369BB /* NSData+SRB64Additions.m */; };
 		ADF04E53182803A5009369BB /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF04E50182803A5009369BB /* SRWebSocket.m */; };
@@ -64,6 +65,10 @@
 		AD42F56C1832D3B200E8632A /* TBSphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSphere.m; sourceTree = "<group>"; };
 		AD42F56E1832DA2300E8632A /* TBPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPoint.h; sourceTree = "<group>"; };
 		AD42F56F1832DA2300E8632A /* TBPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPoint.m; sourceTree = "<group>"; };
+		AD59C5311837EE3900182719 /* TBLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLine.h; sourceTree = "<group>"; };
+		AD59C5321837EE3900182719 /* TBLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLine.m; sourceTree = "<group>"; };
+		AD59C534183918FE00182719 /* TBBearing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBearing.h; sourceTree = "<group>"; };
+		AD59C535183918FE00182719 /* TBBearing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBearing.m; sourceTree = "<group>"; };
 		AD74A8501835F70A006F6BCE /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
 		AD74A8511835F70A006F6BCE /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
 		ADA4CAE418258672005458ED /* Sailing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sailing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,8 +101,6 @@
 		ADC0272E1826C304001E324F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		ADCC6A5D1828E35E0079F528 /* TBRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBRouting.h; sourceTree = "<group>"; };
 		ADCC6A5E1828E35E0079F528 /* TBRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBRouting.m; sourceTree = "<group>"; };
-		ADF04E211827EF64009369BB /* TBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBHelper.h; sourceTree = "<group>"; };
-		ADF04E221827EF64009369BB /* TBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBHelper.m; sourceTree = "<group>"; };
 		ADF04E301827FBB0009369BB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		ADF04E321827FBBA009369BB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ADF04E341827FBC3009369BB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -225,8 +228,6 @@
 				ADA4CB1C18258696005458ED /* TBBoat.h */,
 				ADA4CB1D18258696005458ED /* TBBoat.m */,
 				ADA4CB231826574F005458ED /* TBEnums.h */,
-				ADF04E211827EF64009369BB /* TBHelper.h */,
-				ADF04E221827EF64009369BB /* TBHelper.m */,
 				ADCC6A5D1828E35E0079F528 /* TBRouting.h */,
 				ADCC6A5E1828E35E0079F528 /* TBRouting.m */,
 				AD42F56618328B9E00E8632A /* TBPolygon.h */,
@@ -235,6 +236,10 @@
 				AD42F56C1832D3B200E8632A /* TBSphere.m */,
 				AD42F56E1832DA2300E8632A /* TBPoint.h */,
 				AD42F56F1832DA2300E8632A /* TBPoint.m */,
+				AD59C5311837EE3900182719 /* TBLine.h */,
+				AD59C5321837EE3900182719 /* TBLine.m */,
+				AD59C534183918FE00182719 /* TBBearing.h */,
+				AD59C535183918FE00182719 /* TBBearing.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC027291826BBE0001E324F /* MainViewController.m in Sources */,
+				AD59C5331837EE3900182719 /* TBLine.m in Sources */,
 				AD42F56D1832D3B200E8632A /* TBSphere.m in Sources */,
 				AD42F5701832DA2300E8632A /* TBPoint.m in Sources */,
 				ADAE9CCC1828EAE800A4C936 /* TBWind.m in Sources */,
@@ -372,10 +378,10 @@
 				AD42F56818328B9E00E8632A /* TBPolygon.m in Sources */,
 				ADF04E52182803A5009369BB /* NSData+SRB64Additions.m in Sources */,
 				ADA4CAF418258672005458ED /* main.m in Sources */,
-				ADF04E231827EF64009369BB /* TBHelper.m in Sources */,
 				ADC0272618269C5A001E324F /* WindViewController.m in Sources */,
 				ADCC6A5F1828E35E0079F528 /* TBRouting.m in Sources */,
 				ADF04E51182803A5009369BB /* base64.m in Sources */,
+				AD59C536183918FE00182719 /* TBBearing.m in Sources */,
 				ADA4CB1E18258696005458ED /* TBBoat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

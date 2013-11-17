@@ -17,5 +17,14 @@ enum SIDE
     Spilling = 3
 };
 
+enum COURSE
+{
+    InIrons = 0,
+    CloseHauled = 1,
+    BeamReach = 2,
+    BroadReach = 3,
+    Running = 4
+};
+
 
 #endif

@@ -7,22 +7,35 @@
 //
 
 #import "TBRouting.h"
+#import "TBLine.h"
 
 @implementation TBRouting
 
-- (id)initWithBoat:(TBBoat *)boat andWind:(TBWind *)wind andFinalDestination:(CLLocationCoordinate2D)destination
+- (id)initWithBoat:(TBBoat *)boat andWind:(TBWind *)wind andSphere:(TBSphere *)sphere
 {
     self.boat = boat;
     self.wind = wind;
-    self.destination = destination;
+    self.sphere = sphere;
     
     return self;
 }
 
-- (NSArray *)start
+/*
+ calculates a route from the boat position to
+ a final destination
+ */
+- (NSArray *)routeTo:(TBPoint *)point
 {
+    NSMutableArray *elements = [[NSMutableArray alloc] init];
     
-    return nil;
+    // check direct line
+    TBLine *direct = [[TBLine alloc] initWithStart:self.boat.position andDestination:point andSphere:self.sphere];
+    if ([direct intersectsLandWithAccuracyInMeters:1])
+    {
+        [elements addObject:direct];
+    }
+    
+    return elements;
 }
 
 @end

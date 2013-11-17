@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "TBWind.h"
+#import "TBSphere.h"
 #import "TBBoat.h"
 
 @interface TBRouting : NSObject
 
-@property CLLocationCoordinate2D destination;
 @property (nonatomic, retain) TBWind *wind;
 @property (nonatomic, retain) TBBoat *boat;
+@property (nonatomic, retain) TBSphere *sphere;
 
-- (id)initWithBoat:(TBBoat *)boat andWind:(TBWind *)wind andFinalDestination:(CLLocationCoordinate2D)destination;
-- (NSArray *)start;
+- (id)initWithBoat:(TBBoat *)boat andWind:(TBWind *)wind andSphere:(TBSphere *)sphere;
+- (NSArray *)routeTo:(TBPoint *)point;
 
 @end

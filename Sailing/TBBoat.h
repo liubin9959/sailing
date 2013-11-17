@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "TBWind.h"
 #import "TBEnums.h"
+#import "TBPoint.h"
 
 @interface TBBoat : NSObject
 
 // hard facts
-@property double heading;
+@property (nonatomic, retain) TBBearing *bearing;
 @property double speed;
-@property CLLocationCoordinate2D position;
+@property (nonatomic, retain) TBPoint *position;
 
 // sail facts
 @property int course;
@@ -25,5 +26,6 @@
 
 // Methods
 - (enum SIDE)getBoom;
+- (id)init;
 
 @end

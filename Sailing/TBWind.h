@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TBBearing.h"
 
 @interface TBWind : NSObject
 
 @property double speed;
-@property double heading;
+@property (nonatomic, retain) TBBearing *bearing;
+
+- (id)init;
 
 @end

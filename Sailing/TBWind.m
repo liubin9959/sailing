@@ -10,4 +10,10 @@
 
 @implementation TBWind
 
+- (id)init
+{
+    self.bearing = [[TBBearing alloc] initWithValue:0];
+    return self;
+}
+
 @end
